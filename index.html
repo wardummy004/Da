@@ -157,10 +157,9 @@
     </div>
   </div>  <!-- Main Content -->  <div class="card">
     <div class="rose">🌹</div>
-    <h2>I loveeeeeeeee youuuuuuuuuu babyyyyyyyyyyyyyyyy 💖</h2>
-    <p class="message">
-      Happy Rose Day, <strong>Dheeti Arora</strong> 🌹<br />
-      You are my pehla pyaar, my safe place, my forever.
+    <h2 id="loveTitle">Tap slowly… 💗</h2>
+    <p class="message" id="loveMessage">
+      Every tap brings you closer to my heart 💓
     </p>
     <p class="from">— Always yours, <strong>Dhairya Dwivedi</strong> 💖</p><button class="love-btn" onclick="showLove()">Tap for more love 💘</button>
 
@@ -188,8 +187,30 @@
 
     setInterval(createHeart, 350);
 
+    let step = 0;
+
     function showLove() {
-      alert('You are my today, my tomorrow, and all my forever 💖🌹');
+      const title = document.getElementById('loveTitle');
+      const msg = document.getElementById('loveMessage');
+
+      step++;
+
+      if (step === 1) {
+        title.innerText = 'Just a little closer… 🌹';
+        msg.innerText = 'There is something I’ve been holding in my heart.';
+      } else if (step === 2) {
+        title.innerText = 'My heart races… 💓';
+        msg.innerText = 'Because every time I think of you, my world feels right.';
+      } else if (step === 3) {
+        title.innerText = 'This is important… ✨';
+        msg.innerText = 'You are not just someone special… you are my pehla pyaar.';
+      } else if (step === 4) {
+        title.innerText = 'Now read this slowly… 💖';
+        msg.innerHTML = 'Happy Rose Day, <strong>Dheeti Arora</strong> 🌹<br/>You are my today, my tomorrow, my forever.';
+      } else {
+        title.innerText = 'I loveeeeeeeee youuuuuuuuuu babyyyyyyyyyyyyyyyy 💖';
+        msg.innerHTML = '— Always yours,<br/><strong>Dhairya Dwivedi</strong> 💌';
+      }
     }
   </script></body>
 </html>
