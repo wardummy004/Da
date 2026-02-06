@@ -1,159 +1,273 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>For Dheeti 💖</title>
-
-  <!-- WhatsApp Preview -->
-  <meta property="og:title" content="For Dheeti Arora 💖" />
-  <meta property="og:description" content="Tap to feel how much Dhairya loves you 🌹" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />  <title>For Dheeti 💖</title>  <!-- WhatsApp Preview -->  <meta property="og:title" content="For Dheeti 💖" />
+  <meta property="og:description" content="Happy Rose Day 🌹 I loveeeeeeeee youuuuuuuuuu babyyyyyyyyyyyyyyyy — From Dhairya Dwivedi 💖" />
   <meta property="og:image" content="preview.jpg" />
   <meta property="og:type" content="website" />
-  <meta name="theme-color" content="#ff4d6d">
-
-  <style>
-    * { box-sizing: border-box; }
+  <meta name="twitter:card" content="summary_large_image" />  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', 'Segoe UI', sans-serif;
+    }
 
     body {
-      margin: 0;
-      height: 100vh;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #ff758c, #ff7eb3, #fad0c4);
+      background-size: 400% 400%;
+      animation: bgMove 12s ease infinite;
       display: flex;
-      justify-content: center;
       align-items: center;
-      background: radial-gradient(circle at top, #ffb6c1, #ff4d6d);
-      font-family: 'Segoe UI', sans-serif;
+      justify-content: center;
       overflow: hidden;
+      color: #fff;
     }
 
-    .card {
-      background: rgba(255,255,255,0.15);
-      backdrop-filter: blur(10px);
-      padding: 30px 25px;
-      border-radius: 24px;
+    @keyframes bgMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* Opening Screen */
+    #opening {
+      position: fixed;
+      inset: 0;
+      background: radial-gradient(circle at top, #ff9a9e, #ff4d6d);
+      display: flex;
+      align-items: center;
+      justify-content: center;
       text-align: center;
-      max-width: 340px;
-      width: 90%;
-      box-shadow: 0 25px 60px rgba(0,0,0,0.25);
-      animation: pop 0.8s ease;
+      z-index: 10;
+      animation: fadeIn 1.5s ease;
     }
 
-    @keyframes pop {
-      from { transform: scale(0.85); opacity: 0; }
-      to { transform: scale(1); opacity: 1; }
+    #opening h1 {
+      font-size: clamp(3rem, 7vw, 4.5rem);
+      animation: heartbeat 1.4s infinite;
     }
 
-    h1 {
-      color: #fff;
-      font-size: 24px;
-      margin-bottom: 12px;
-      animation: fadeUp 0.6s ease;
+    #opening p {
+      margin-top: 1.2rem;
+      font-size: 1.3rem;
+      opacity: 0.95;
     }
 
-    p {
-      color: #fff;
-      font-size: 16px;
-      min-height: 60px;
-      animation: fadeUp 0.8s ease;
+    @keyframes heartbeat {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.08); }
     }
 
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(15px); }
-      to { opacity: 1; transform: translateY(0); }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
     }
 
-    button {
-      margin-top: 20px;
-      padding: 14px 24px;
-      font-size: 16px;
-      border: none;
-      border-radius: 30px;
-      background: linear-gradient(135deg, #ff4d6d, #ff85a1);
-      color: white;
-      cursor: pointer;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-      transition: transform 0.2s;
+    /* Main Card */
+    .card {
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(18px);
+      border-radius: 28px;
+      padding: 3rem 2.5rem;
+      text-align: center;
+      box-shadow: 0 30px 60px rgba(0,0,0,0.25);
+      max-width: 520px;
+      animation: riseUp 1.2s ease;
     }
 
-    button:active { transform: scale(0.95); }
+    @keyframes riseUp {
+      from { transform: translateY(40px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
 
-    .heart {
-      position: absolute;
-      font-size: 18px;
-      animation: float 4s linear forwards;
-      pointer-events: none;
+    .rose {
+      font-size: 5.5rem;
+      animation: float 3s ease-in-out infinite;
+      margin-bottom: 1rem;
     }
 
     @keyframes float {
-      from { transform: translateY(0) scale(1); opacity: 1; }
-      to { transform: translateY(-120vh) scale(1.6); opacity: 0; }
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-18px); }
     }
-  </style>
-</head>
 
-<body>
+    h2 {
+      font-size: clamp(2.2rem, 5vw, 3.2rem);
+      margin-bottom: 1rem;
+      text-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    }
 
-  <div class="card">
-    <h1 id="title">Tap gently 💗</h1>
-    <p id="message">Every tap reveals how I feel about you…</p>
-    <button id="btn">Tap for more love 💘</button>
-  </div>
+    .message {
+      font-size: 1.3rem;
+      line-height: 1.7;
+      opacity: 0.95;
+    }
 
-  <!-- MOBILE SAFE AUDIO -->
-  <audio id="music" preload="none" loop>
-    <source src="pehla_pyaar.mp3" type="audio/mpeg">
-  </audio>
+    .from {
+      margin-top: 2rem;
+      font-size: 1.1rem;
+      opacity: 0.9;
+    }
 
-  <script>
-    const steps = [
-      { t: "For Dheeti Arora 🌹", m: "From the moment you came into my life…" },
-      { t: "You became special 💖", m: "Not slowly. Instantly." },
-      { t: "My safe place 🫶", m: "My smile. My calm." },
-      { t: "I loveeeeeeeee youuuuuuuuuu babyyyyyyyyyyyyyyyy 💘", 
-        m: "— Forever yours,<br><b>Dhairya Dwivedi</b>" }
-    ];
+    /* Falling Hearts */
+    .heart {
+      position: fixed;
+      font-size: 1.6rem;
+      animation: fall linear forwards;
+      pointer-events: none;
+    }
 
-    let step = 0;
-    let musicStarted = false;
-
-    const title = document.getElementById("title");
-    const message = document.getElementById("message");
-    const btn = document.getElementById("btn");
-    const music = document.getElementById("music");
-
-    btn.addEventListener("click", () => {
-
-      // Start music safely on first tap
-      if (!musicStarted) {
-        music.play().catch(() => {});
-        musicStarted = true;
+    @keyframes fall {
+      from {
+        transform: translateY(-10vh) scale(1);
+        opacity: 1;
       }
-
-      if (step < steps.length) {
-        title.innerHTML = steps[step].t;
-        message.innerHTML = steps[step].m;
-        spawnHearts(12);
-        step++;
-      } else {
-        step = 0;
-        title.innerHTML = "Tap gently 💗";
-        message.innerHTML = "Every tap reveals how I feel about you…";
+      to {
+        transform: translateY(110vh) scale(1.8);
+        opacity: 0;
       }
+    }
+
+    /* Love Button */
+    .love-btn {
+      margin-top: 2rem;
+      background: linear-gradient(135deg, #ff4d6d, #ff758c);
+      border: none;
+      padding: 0.9rem 2.2rem;
+      border-radius: 50px;
+      font-size: 1.1rem;
+      color: white;
+      cursor: pointer;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.25);
+      transition: transform 0.3s ease;
+    }
+
+    .love-btn:hover {
+      transform: scale(1.12);
+      box-shadow: 0 25px 55px rgba(0,0,0,0.45);
+    }
+
+    /* Animated Love Button */
+    .love-btn {
+      margin-top: 2.5rem;
+      background: linear-gradient(135deg, #ff4d6d, #ff9a9e);
+      border: none;
+      padding: 1rem 2.6rem;
+      border-radius: 60px;
+      font-size: 1.15rem;
+      color: white;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.35);
+      animation: pulseGlow 1.8s infinite;
+    }
+
+    .love-btn::before {
+      content: '💖';
+      position: absolute;
+      left: -30px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 1.4rem;
+      animation: heartSlide 2.2s infinite;
+      opacity: 0.8;
+    }
+
+    .love-btn::after {
+      content: '✨';
+      position: absolute;
+      right: -30px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 1.2rem;
+      animation: sparkSlide 2.2s infinite;
+      opacity: 0.8;
+    }
+
+    @keyframes pulseGlow {
+      0% { transform: scale(1); box-shadow: 0 0 0 rgba(255,77,109,0.7); }
+      50% { transform: scale(1.08); box-shadow: 0 0 35px rgba(255,77,109,0.9); }
+      100% { transform: scale(1); box-shadow: 0 0 0 rgba(255,77,109,0.7); }
+    }
+
+    @keyframes heartSlide {
+      0% { left: -30px; opacity: 0; }
+      50% { left: 15px; opacity: 1; }
+      100% { left: 100%; opacity: 0; }
+    }
+
+    @keyframes sparkSlide {
+      0% { right: -30px; opacity: 0; }
+      50% { right: 15px; opacity: 1; }
+      100% { right: 100%; opacity: 0; }
+    }
+
+  </style></head>
+<body>  <!-- Opening -->  <div id="opening">
+    <div>
+      <h1>For Dheeti 💖</h1>
+      <p>Tap anywhere</p>
+      <p style="margin-top:2rem; font-size:1.1rem;">From Dhairya Dwivedi 💌</p>
+    </div>
+  </div>  <!-- Main Content -->  <div class="card">
+    <div class="rose">🌹</div>
+    <h2 id="loveTitle">Tap slowly… 💗</h2>
+    <p class="message" id="loveMessage">
+      Every tap brings you closer to my heart 💓
+    </p>
+    <p class="from">— Always yours, <strong>Dhairya Dwivedi</strong> 💖</p><button class="love-btn" onclick="showLove()">Tap for more love 💘</button>
+
+  </div>  <!-- Music -->  <audio id="bgMusic" loop>
+    <source src="pehla_pyaar.mp3" type="audio/mpeg" />
+  </audio>  <script>
+    const opening = document.getElementById('opening');
+    const music = document.getElementById('bgMusic');
+
+    opening.addEventListener('click', () => {
+      opening.style.display = 'none';
+      music.play();
     });
 
-    function spawnHearts(count) {
-      for (let i = 0; i < count; i++) {
-        const heart = document.createElement("div");
-        heart.className = "heart";
-        heart.textContent = "💖";
-        heart.style.left = Math.random() * 100 + "vw";
-        heart.style.bottom = "-20px";
-        heart.style.animationDuration = (3 + Math.random() * 2) + "s";
-        document.body.appendChild(heart);
-        setTimeout(() => heart.remove(), 5000);
+    function createHeart() {
+      const heart = document.createElement('div');
+      heart.classList.add('heart');
+      heart.innerHTML = Math.random() > 0.5 ? '❤️' : '💖';
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.animationDuration = (4 + Math.random() * 3) + 's';
+      document.body.appendChild(heart);
+
+      setTimeout(() => heart.remove(), 7000);
+    }
+
+    setInterval(createHeart, 350);
+
+    let step = 0;
+
+    function showLove() {
+      const title = document.getElementById('loveTitle');
+      const msg = document.getElementById('loveMessage');
+
+      step++;
+
+      if (step === 1) {
+        title.innerText = 'Just a little closer… 🌹';
+        msg.innerText = 'There is something I’ve been holding in my heart.';
+      } else if (step === 2) {
+        title.innerText = 'My heart races… 💓';
+        msg.innerText = 'Because every time I think of you, my world feels right.';
+      } else if (step === 3) {
+        title.innerText = 'This is important… ✨';
+        msg.innerText = 'You are not just someone special… you are my pehla pyaar.';
+      } else if (step === 4) {
+        title.innerText = 'Now read this slowly… 💖';
+        msg.innerHTML = 'Happy Rose Day, <strong>Dheeti Arora</strong> 🌹<br/>You are my today, my tomorrow, my forever.';
+      } else {
+        title.innerText = 'I loveeeeeeeee youuuuuuuuuu babyyyyyyyyyyyyyyyy 💖';
+        msg.innerHTML = '— Always yours,<br/><strong>Dhairya Dwivedi</strong> 💌';
       }
     }
-  </script>
-
-</body>
+  </script></body>
 </html>
