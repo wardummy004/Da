@@ -1,341 +1,268 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />  <title>For Dheeti 💖</title>  <!-- WhatsApp Preview -->  <meta property="og:title" content="For Dheeti 💖" />
-  <meta property="og:description" content="Happy Rose Day 🌹 I loveeeeeeeee youuuuuuuuuu babyyyyyyyyyyyyyyyy — From Dhairya Dwivedi 💖" />
-  <meta property="og:image" content="preview.jpg" />
-  <meta property="og:type" content="website" />
-  <meta name="twitter:card" content="summary_large_image" />  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Poppins', 'Segoe UI', sans-serif;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    body {
-      min-height: 100vh;
-      background: linear-gradient(135deg, #ff758c, #ff7eb3, #fad0c4);
-      background-size: 400% 400%;
-      animation: bgMove 12s ease infinite;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-      color: #fff;
-    }
+<title>For Dheeti 💖</title>
 
-    @keyframes bgMove {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
+<!-- WhatsApp Preview -->
+<meta property="og:title" content="For Dheeti 💖">
+<meta property="og:description" content="Happy Rose Day 🌹 I loveeeeeeeee youuuuuuuuuu babyyyyyyyyyyyyyyyy — From Dhairya Dwivedi 💖">
+<meta property="og:image" content="preview.jpg">
+<meta property="og:type" content="website">
 
-    /* Opening Screen */
-    #opening {
-      position: fixed;
-      inset: 0;
-      background: radial-gradient(circle at top, #ff9a9e, #ff4d6d);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      z-index: 10;
-      animation: fadeIn 1.5s ease;
-    }
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Poppins,Segoe UI,sans-serif;
+}
 
-    #opening h1 {
-      font-size: clamp(3rem, 7vw, 4.5rem);
-      animation: heartbeat 1.4s infinite;
-    }
+body{
+  min-height:100vh;
+  background:linear-gradient(135deg,#ff758c,#ff7eb3,#fad0c4);
+  background-size:400% 400%;
+  animation:bgMove 12s ease infinite;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  overflow:hidden;
+  color:#fff;
+}
 
-    #opening p {
-      margin-top: 1.2rem;
-      font-size: 1.3rem;
-      opacity: 0.95;
-    }
+@keyframes bgMove{
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
 
-    @keyframes heartbeat {
-      0%, 100% { transform: scale(1); }
-      50% { transform: scale(1.08); }
-    }
+/* Opening Screen */
+#opening{
+  position:fixed;
+  inset:0;
+  background:radial-gradient(circle,#ff9a9e,#ff4d6d);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  z-index:10;
+  cursor:pointer;
+}
 
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
+#opening h1{
+  font-size:3rem;
+  animation:heartbeat 1.4s infinite;
+}
 
-    /* Main Card */
-    .card {
-      background: rgba(255, 255, 255, 0.15);
-      backdrop-filter: blur(18px);
-      border-radius: 28px;
-      padding: 3rem 2.5rem;
-      text-align: center;
-      box-shadow: 0 30px 60px rgba(0,0,0,0.25);
-      max-width: 520px;
-      animation: riseUp 1.2s ease;
-    }
+@keyframes heartbeat{
+  0%,100%{transform:scale(1)}
+  50%{transform:scale(1.08)}
+}
 
-    @keyframes riseUp {
-      from { transform: translateY(40px); opacity: 0; }
-      to { transform: translateY(0); opacity: 1; }
-    }
+/* Card */
+.card{
+  background:rgba(255,255,255,0.15);
+  backdrop-filter:blur(18px);
+  border-radius:28px;
+  padding:3rem 2.5rem;
+  text-align:center;
+  max-width:520px;
+  box-shadow:0 30px 60px rgba(0,0,0,0.3);
+}
 
-    .rose {
-      font-size: 5.5rem;
-      animation: float 3s ease-in-out infinite;
-      margin-bottom: 1rem;
-    }
+.rose{
+  font-size:5rem;
+  animation:float 3s ease-in-out infinite;
+}
 
-    @keyframes float {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-18px); }
-    }
+@keyframes float{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-15px)}
+}
 
-    h2 {
-      font-size: clamp(2.2rem, 5vw, 3.2rem);
-      margin-bottom: 1rem;
-      text-shadow: 0 8px 20px rgba(0,0,0,0.3);
-      animation: textPop 0.8s ease forwards;
-    }
+h2{
+  font-size:2.4rem;
+  margin:1rem 0;
+}
 
-    #loveMessage {
-      margin-top: 0.8rem;
-      animation: textFadeUp 1s ease forwards;
-    }
+.message{
+  font-size:1.2rem;
+  line-height:1.6;
+}
 
-    @keyframes textPop {
-      0% { opacity: 0; transform: scale(0.7); }
-      60% { opacity: 1; transform: scale(1.15); }
-      100% { transform: scale(1); }
-    }
+.from{
+  margin-top:1.8rem;
+  opacity:0.9;
+}
 
-    @keyframes textFadeUp {
-      0% { opacity: 0; transform: translateY(20px); }
-      100% { opacity: 1; transform: translateY(0); }
-    }
+/* Text Animations */
+@keyframes textPop{
+  0%{opacity:0;transform:scale(0.7)}
+  60%{opacity:1;transform:scale(1.15)}
+  100%{transform:scale(1)}
+}
 
-    .message {
-      font-size: 1.3rem;
-      line-height: 1.7;
-      opacity: 0.95;
-    }
+@keyframes textFadeUp{
+  from{opacity:0;transform:translateY(20px)}
+  to{opacity:1;transform:translateY(0)}
+}
 
-    .from {
-      margin-top: 2rem;
-      font-size: 1.1rem;
-      opacity: 0.9;
-    }
+/* Love Button */
+.love-btn{
+  margin-top:2.2rem;
+  padding:1rem 2.6rem;
+  font-size:1.1rem;
+  border:none;
+  border-radius:60px;
+  background:linear-gradient(135deg,#ff4d6d,#ff9a9e);
+  color:white;
+  cursor:pointer;
+  box-shadow:0 20px 40px rgba(0,0,0,0.35);
+  animation:pulseGlow 1.8s infinite;
+}
 
-    /* Falling Hearts */
-    .heart {
-      position: fixed;
-      font-size: 1.6rem;
-      animation: fall linear forwards;
-      pointer-events: none;
-    }
+@keyframes pulseGlow{
+  0%{transform:scale(1)}
+  50%{transform:scale(1.08)}
+  100%{transform:scale(1)}
+}
 
-    @keyframes fall {
-      from {
-        transform: translateY(-10vh) scale(1);
-        opacity: 1;
-      }
-      to {
-        transform: translateY(110vh) scale(1.8);
-        opacity: 0;
-      }
-    }
+/* Falling Hearts */
+.heart{
+  position:fixed;
+  font-size:1.6rem;
+  animation:fall linear forwards;
+  pointer-events:none;
+}
 
-    /* Love Button */
-    .love-btn {
-      margin-top: 2rem;
-      background: linear-gradient(135deg, #ff4d6d, #ff758c);
-      border: none;
-      padding: 0.9rem 2.2rem;
-      border-radius: 50px;
-      font-size: 1.1rem;
-      color: white;
-      cursor: pointer;
-      box-shadow: 0 15px 30px rgba(0,0,0,0.25);
-      transition: transform 0.3s ease;
-    }
+@keyframes fall{
+  from{transform:translateY(-10vh);opacity:1}
+  to{transform:translateY(110vh);opacity:0}
+}
+</style>
+</head>
 
-    .love-btn:hover {
-      transform: scale(1.12);
-      box-shadow: 0 25px 55px rgba(0,0,0,0.45);
-    }
+<body>
 
-    /* Animated Love Button */
-    .love-btn {
-      margin-top: 2.5rem;
-      background: linear-gradient(135deg, #ff4d6d, #ff9a9e);
-      border: none;
-      padding: 1rem 2.6rem;
-      border-radius: 60px;
-      font-size: 1.15rem;
-      color: white;
-      cursor: pointer;
-      position: relative;
-      overflow: hidden;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.35);
-      animation: pulseGlow 1.8s infinite;
-    }
+<!-- Opening -->
+<div id="opening">
+  <div>
+    <h1>For Dheeti 💖</h1>
+    <p>Tap anywhere</p>
+    <p style="margin-top:1.5rem;">From Dhairya Dwivedi 💌</p>
+  </div>
+</div>
 
-    .love-btn::before {
-      content: '💖';
-      position: absolute;
-      left: -30px;
-      top: 50%;
-      transform: translateY(-50%);
-      font-size: 1.4rem;
-      animation: heartSlide 2.2s infinite;
-      opacity: 0.8;
-    }
+<div class="card">
+  <div class="rose">🌹</div>
+  <h2 id="loveTitle">Tap slowly… 💗</h2>
+  <p class="message" id="loveMessage">Every tap brings you closer to my heart 💓</p>
+  <p class="from">— Dhairya Dwivedi</p>
 
-    .love-btn::after {
-      content: '✨';
-      position: absolute;
-      right: -30px;
-      top: 50%;
-      transform: translateY(-50%);
-      font-size: 1.2rem;
-      animation: sparkSlide 2.2s infinite;
-      opacity: 0.8;
-    }
+  <button class="love-btn" id="loveBtn">Tap for more love 💘</button>
+</div>
 
-    @keyframes pulseGlow {
-      0% { transform: scale(1); box-shadow: 0 0 0 rgba(255,77,109,0.7); }
-      50% { transform: scale(1.08); box-shadow: 0 0 35px rgba(255,77,109,0.9); }
-      100% { transform: scale(1); box-shadow: 0 0 0 rgba(255,77,109,0.7); }
-    }
+<audio id="bgMusic" loop>
+  <source src="pehla_pyaar.mp3" type="audio/mpeg">
+</audio>
 
-    @keyframes heartSlide {
-      0% { left: -30px; opacity: 0; }
-      50% { left: 15px; opacity: 1; }
-      100% { left: 100%; opacity: 0; }
-    }
+<script>
+const opening = document.getElementById("opening");
+const music = document.getElementById("bgMusic");
+const title = document.getElementById("loveTitle");
+const msg = document.getElementById("loveMessage");
+const btn = document.getElementById("loveBtn");
 
-    @keyframes sparkSlide {
-      0% { right: -30px; opacity: 0; }
-      50% { right: 15px; opacity: 1; }
-      100% { right: 100%; opacity: 0; }
-    }
+let openedOnce = false;
+let step = 0;
 
-  </style></head>
-<body>  <!-- Opening -->  <div id="opening">
-    <div>
-      <h1>For Dheeti 💖</h1>
-      <p>Tap anywhere</p>
-      <p style="margin-top:2rem; font-size:1.1rem;">From Dhairya Dwivedi 💌</p>
-    </div>
-  </div>  <!-- Main Content -->  <div class="card">
-    <div class="rose">🌹</div>
-    <h2 id="loveTitle">Tap slowly… 💗</h2>
-    <p class="message" id="loveMessage">
-      Every tap brings you closer to my heart 💓
-    </p>
-    <p class="from">— Always yours, <strong>Dhairya Dwivedi</strong> 💖</p><button class="love-btn" id="loveBtn" onclick="showLove()">Tap for more love 💘</button>
+/* Opening screen fix */
+opening.addEventListener("click", () => {
+  if (!openedOnce) {
+    opening.style.display = "none";
+    music.play();
+    openedOnce = true;
+  }
+});
 
-  </div>  <!-- Music -->  <audio id="bgMusic" loop>
-    <source src="pehla_pyaar.mp3" type="audio/mpeg" />
-  </audio>  <script>
-    const opening = document.getElementById('opening');
-    const music = document.getElementById('bgMusic');
+/* Falling hearts */
+setInterval(() => {
+  const heart = document.createElement("div");
+  heart.className = "heart";
+  heart.innerHTML = Math.random() > 0.5 ? "❤️" : "💖";
+  heart.style.left = Math.random() * 100 + "vw";
+  heart.style.animationDuration = (4 + Math.random() * 3) + "s";
+  document.body.appendChild(heart);
+  setTimeout(() => heart.remove(), 7000);
+}, 350);
 
-    opening.addEventListener('click', () => {
-      opening.style.display = 'none';
-      music.play();
-    });
+/* Button logic */
+btn.onclick = showLove;
 
-    function createHeart() {
-      const heart = document.createElement('div');
-      heart.classList.add('heart');
-      heart.innerHTML = Math.random() > 0.5 ? '❤️' : '💖';
-      heart.style.left = Math.random() * 100 + 'vw';
-      heart.style.animationDuration = (4 + Math.random() * 3) + 's';
-      document.body.appendChild(heart);
+function animateText() {
+  title.style.animation = "none";
+  msg.style.animation = "none";
+  void title.offsetWidth;
+  void msg.offsetWidth;
+  title.style.animation = "textPop 0.8s ease";
+  msg.style.animation = "textFadeUp 1s ease";
+}
 
-      setTimeout(() => heart.remove(), 7000);
-    }
+function showLove() {
+  step++;
+  animateText();
 
-    setInterval(createHeart, 350);
+  if (step === 1) {
+    title.innerText = "Just a little closer… 🌹";
+    msg.innerText = "There is something I’ve been holding in my heart.";
+  } else if (step === 2) {
+    title.innerText = "My heart races… 💓";
+    msg.innerText = "Every time I think of you, my world feels right.";
+  } else if (step === 3) {
+    title.innerText = "This is important… ✨";
+    msg.innerText = "You are my pehla pyaar.";
+  } else if (step === 4) {
+    title.innerText = "Now read this slowly… 💖";
+    msg.innerHTML = "Happy Rose Day <strong>Dheeti Arora</strong> 🌹<br>You are my today, tomorrow & forever.";
+  } else {
+    title.innerText = "I loveeeeeeeee youuuuuuuuuu babyyyyyyyyyyyyyyyy 💖";
+    msg.innerHTML = "— Always yours<br><strong>Dhairya Dwivedi</strong> 💌";
+    heartExplosion();
+    btn.innerText = "Start from beginning again 🔁💖";
+    btn.onclick = restartLove;
+  }
+}
 
-    // Magnetic button effect
-    const btn = document.getElementById('loveBtn');
-    document.addEventListener('mousemove', (e) => {
-      const rect = btn.getBoundingClientRect();
-      const btnX = rect.left + rect.width / 2;
-      const btnY = rect.top + rect.height / 2;
-      const distX = e.clientX - btnX;
-      const distY = e.clientY - btnY;
-      const distance = Math.sqrt(distX * distX + distY * distY);
+function restartLove() {
+  step = 0;
+  animateText();
+  title.innerText = "Tap slowly… 💗";
+  msg.innerText = "Every tap brings you closer to my heart 💓";
+  btn.innerText = "Tap for more love 💘";
+  btn.onclick = showLove;
+}
 
-      if (distance < 120) {
-        btn.style.transform = translate(${distX * 0.25}px, ${distY * 0.25}px) scale(1.15);
-      } else {
-        title.innerText = 'I loveeeeeeeee youuuuuuuuuu babyyyyyyyyyyyyyyyy 💖';
-        msg.innerHTML = '— Always yours,<br/><strong>Dhairya Dwivedi</strong> 💌';
-        heartExplosion();
+function heartExplosion() {
+  for (let i = 0; i < 40; i++) {
+    const h = document.createElement("div");
+    h.innerHTML = Math.random() > 0.5 ? "❤️" : "💖";
+    h.style.position = "fixed";
+    h.style.left = "50%";
+    h.style.top = "50%";
+    h.style.fontSize = "1.8rem";
+    const angle = Math.random() * Math.PI * 2;
+    const dist = 100 + Math.random() * 120;
+    h.animate([
+      { transform: "translate(-50%,-50%) scale(1)", opacity: 1 },
+      { transform: translate(${Math.cos(angle)*dist}px,${Math.sin(angle)*dist}px) scale(1.8), opacity: 0 }
+    ], { duration: 1200, easing: "ease-out" });
+    document.body.appendChild(h);
+    setTimeout(() => h.remove(), 1300);
+  }
+}
+</script>
 
-        const btn = document.getElementById('loveBtn');
-        btn.innerText = 'Start from beginning again 🔁💖';
-        btn.onclick = restartLove;
-      }
-    }
-
-    function restartLove() {
-      step = 0;
-      const title = document.getElementById('loveTitle');
-      const msg = document.getElementById('loveMessage');
-      const btn = document.getElementById('loveBtn');
-
-      title.style.animation = 'none'; void title.offsetWidth;
-      msg.style.animation = 'none'; void msg.offsetWidth;
-
-      title.innerText = 'Tap slowly… 💗';
-      msg.innerText = 'Every tap brings you closer to my heart 💓';
-
-      btn.innerText = 'Tap for more love 💘';
-      btn.onclick = showLove;
-    }
-
-    function heartExplosion() {
-      for (let i = 0; i < 40; i++) {
-        const heart = document.createElement('div');
-        heart.innerHTML = Math.random() > 0.5 ? '❤️' : '💖';
-        heart.style.position = 'fixed';
-        heart.style.left = '50%';
-        heart.style.top = '50%';
-        heart.style.fontSize = '1.8rem';
-        heart.style.pointerEvents = 'none';
-        const angle = Math.random() * 2 * Math.PI;
-        const distance = 100 + Math.random() * 120;
-        const x = Math.cos(angle) * distance;
-        const y = Math.sin(angle) * distance;
-        heart.animate([
-          { transform: 'translate(-50%, -50%) scale(1)', opacity: 1 },
-          { transform: translate(${x}px, ${y}px) scale(1.8), opacity: 0 }
-        ], {
-          duration: 1200,
-          easing: 'ease-out'
-        });
-        document.body.appendChild(heart);
-        setTimeout(() => heart.remove(), 1300);
-      }
-    } else if (step === 2) {
-        title.style.animation = 'none'; void title.offsetWidth; title.style.animation = 'textPop 0.8s ease forwards'; title.innerText = 'My heart races… 💓';
-        msg.style.animation = 'none'; void msg.offsetWidth; msg.style.animation = 'textFadeUp 1s ease forwards'; msg.innerText = 'Because every time I think of you, my world feels right.';
-      } else if (step === 3) {
-        title.style.animation = 'none'; void title.offsetWidth; title.style.animation = 'textPop 0.8s ease forwards'; title.innerText = 'This is important… ✨';
-        msg.style.animation = 'none'; void msg.offsetWidth; msg.style.animation = 'textFadeUp 1s ease forwards'; msg.innerText = 'You are not just someone special… you are my pehla pyaar.';
-      } else if (step === 4) {
-        title.style.animation = 'none'; void title.offsetWidth; title.style.animation = 'textPop 0.8s ease forwards'; title.innerText = 'Now read this slowly… 💖';
-        msg.style.animation = 'none'; void msg.offsetWidth; msg.style.animation = 'textFadeUp 1s ease forwards'; msg.innerHTML = 'Happy Rose Day, <strong>Dheeti Arora</strong> 🌹<br/>You are my today, my tomorrow, my forever.';
-      } else {
-        title.style.animation = 'none'; void title.offsetWidth; title.style.animation = 'textPop 0.8s ease forwards'; title.innerText = 'I loveeeeeeeee youuuuuuuuuu babyyyyyyyyyyyyyyyy 💖';
-        msg.style.animation = 'none'; void msg.offsetWidth; msg.style.animation = 'textFadeUp 1s ease forwards'; msg.innerHTML = '— Always yours,<br/><strong>Dhairya Dwivedi</strong> 💌';
-      }
-    }
-  </script></body>
+</body>
 </html>
