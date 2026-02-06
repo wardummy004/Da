@@ -97,6 +97,23 @@
       font-size: clamp(2.2rem, 5vw, 3.2rem);
       margin-bottom: 1rem;
       text-shadow: 0 8px 20px rgba(0,0,0,0.3);
+      animation: textPop 0.8s ease forwards;
+    }
+
+    #loveMessage {
+      margin-top: 0.8rem;
+      animation: textFadeUp 1s ease forwards;
+    }
+
+    @keyframes textPop {
+      0% { opacity: 0; transform: scale(0.7); }
+      60% { opacity: 1; transform: scale(1.15); }
+      100% { transform: scale(1); }
+    }
+
+    @keyframes textFadeUp {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
     }
 
     .message {
@@ -257,37 +274,30 @@
       if (distance < 120) {
         btn.style.transform = translate(${distX * 0.25}px, ${distY * 0.25}px) scale(1.15);
       } else {
-        btn.style.transform = 'translate(0,0) scale(1)';
-      }
-    });
-
-    let step = 0;
-
-    let step = 0;
-
-    function showLove() {
-      const title = document.getElementById('loveTitle');
-      const msg = document.getElementById('loveMessage');
-
-      step++;
-
-      if (step === 1) {
-        title.innerText = 'Just a little closer… 🌹';
-        msg.innerText = 'There is something I’ve been holding in my heart.';
-      } else if (step === 2) {
-        title.innerText = 'My heart races… 💓';
-        msg.innerText = 'Because every time I think of you, my world feels right.';
-      } else if (step === 3) {
-        title.innerText = 'This is important… ✨';
-        msg.innerText = 'You are not just someone special… you are my pehla pyaar.';
-      } else if (step === 4) {
-        title.innerText = 'Now read this slowly… 💖';
-        msg.innerHTML = 'Happy Rose Day, <strong>Dheeti Arora</strong> 🌹<br/>You are my today, my tomorrow, my forever.';
-      } else {
         title.innerText = 'I loveeeeeeeee youuuuuuuuuu babyyyyyyyyyyyyyyyy 💖';
         msg.innerHTML = '— Always yours,<br/><strong>Dhairya Dwivedi</strong> 💌';
         heartExplosion();
+
+        const btn = document.getElementById('loveBtn');
+        btn.innerText = 'Start from beginning again 🔁💖';
+        btn.onclick = restartLove;
       }
+    }
+
+    function restartLove() {
+      step = 0;
+      const title = document.getElementById('loveTitle');
+      const msg = document.getElementById('loveMessage');
+      const btn = document.getElementById('loveBtn');
+
+      title.style.animation = 'none'; void title.offsetWidth;
+      msg.style.animation = 'none'; void msg.offsetWidth;
+
+      title.innerText = 'Tap slowly… 💗';
+      msg.innerText = 'Every tap brings you closer to my heart 💓';
+
+      btn.innerText = 'Tap for more love 💘';
+      btn.onclick = showLove;
     }
 
     function heartExplosion() {
@@ -314,17 +324,17 @@
         setTimeout(() => heart.remove(), 1300);
       }
     } else if (step === 2) {
-        title.innerText = 'My heart races… 💓';
-        msg.innerText = 'Because every time I think of you, my world feels right.';
+        title.style.animation = 'none'; void title.offsetWidth; title.style.animation = 'textPop 0.8s ease forwards'; title.innerText = 'My heart races… 💓';
+        msg.style.animation = 'none'; void msg.offsetWidth; msg.style.animation = 'textFadeUp 1s ease forwards'; msg.innerText = 'Because every time I think of you, my world feels right.';
       } else if (step === 3) {
-        title.innerText = 'This is important… ✨';
-        msg.innerText = 'You are not just someone special… you are my pehla pyaar.';
+        title.style.animation = 'none'; void title.offsetWidth; title.style.animation = 'textPop 0.8s ease forwards'; title.innerText = 'This is important… ✨';
+        msg.style.animation = 'none'; void msg.offsetWidth; msg.style.animation = 'textFadeUp 1s ease forwards'; msg.innerText = 'You are not just someone special… you are my pehla pyaar.';
       } else if (step === 4) {
-        title.innerText = 'Now read this slowly… 💖';
-        msg.innerHTML = 'Happy Rose Day, <strong>Dheeti Arora</strong> 🌹<br/>You are my today, my tomorrow, my forever.';
+        title.style.animation = 'none'; void title.offsetWidth; title.style.animation = 'textPop 0.8s ease forwards'; title.innerText = 'Now read this slowly… 💖';
+        msg.style.animation = 'none'; void msg.offsetWidth; msg.style.animation = 'textFadeUp 1s ease forwards'; msg.innerHTML = 'Happy Rose Day, <strong>Dheeti Arora</strong> 🌹<br/>You are my today, my tomorrow, my forever.';
       } else {
-        title.innerText = 'I loveeeeeeeee youuuuuuuuuu babyyyyyyyyyyyyyyyy 💖';
-        msg.innerHTML = '— Always yours,<br/><strong>Dhairya Dwivedi</strong> 💌';
+        title.style.animation = 'none'; void title.offsetWidth; title.style.animation = 'textPop 0.8s ease forwards'; title.innerText = 'I loveeeeeeeee youuuuuuuuuu babyyyyyyyyyyyyyyyy 💖';
+        msg.style.animation = 'none'; void msg.offsetWidth; msg.style.animation = 'textFadeUp 1s ease forwards'; msg.innerHTML = '— Always yours,<br/><strong>Dhairya Dwivedi</strong> 💌';
       }
     }
   </script></body>
